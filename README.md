@@ -4,7 +4,7 @@ The fixed angle conjecture for the quantum approximate optimization algorithm on
 
 ### Directory structure
 
-The general approach is to have data an presentation layers separate à-la MVC pattern.
+The general approach is to have the data separate from the presentation, à-la MVC pattern.
 
 * `data/*.(nc|json|npy)` - data files
 * `data/generators/` - scripts that generate the data 
