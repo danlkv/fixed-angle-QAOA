@@ -2,6 +2,31 @@
 
 The fixed angle conjecture for the quantum approximate optimization algorithm onregular MaxCut graphs
 
+### The universal angles
+
+The universal angles for MaxCut on regular graphs QAOA with guaranteed performance are located in [angles_regular_graphs.json](angles_regular_graphs.json)
+
+#### File structure
+
+```
+connectivity (str):
+    p (str):
+        angles: list # gamma, beta concatenated. list length = 2p
+        AR: float # The approximation ratio guaranteed by the angles
+```
+
+#### Usage
+
+```python
+def get_angles(p: int, conn: int) -> tuple:
+    try:
+        gamma_beta = data[str(conn)][str(p)]['angles']
+        gamma, beta = gamma_beta[:p], gamma_beta[p:]
+        return gamma, beta
+    except KeyError:
+        print('Angles not found!')
+```
+
 ### Directory structure
 
 The general approach is to have the data separate from the presentation, à-la MVC pattern.
