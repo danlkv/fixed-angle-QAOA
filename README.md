@@ -11,7 +11,8 @@ The universal angles for MaxCut on regular graphs QAOA with guaranteed performan
 ```
 connectivity (str):
     p (str):
-        angles: list # gamma, beta concatenated. list length = 2p
+        gamma: list
+        beta: list
         AR: float # The approximation ratio guaranteed by the angles
 ```
 
