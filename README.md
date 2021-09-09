@@ -21,8 +21,8 @@ connectivity (str):
 ```python
 def get_angles(p: int, conn: int) -> tuple:
     try:
-        gamma_beta = data[str(conn)][str(p)]['angles']
-        gamma, beta = gamma_beta[:p], gamma_beta[p:]
+        data_p = data[str(conn)][str(p)]
+        gamma, beta = data_p['gamma'], data_p['beta']
         return gamma, beta
     except KeyError:
         print('Angles not found!')
