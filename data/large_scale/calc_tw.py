@@ -2,8 +2,8 @@ import qtensor
 from collections import defaultdict
 import networkx as nx
 
-p = 7
-deg = 4
+p = 4
+deg = 3
 def bethe_graph(p, degree):
     def add_nodes_to_leafs(graph, deg=3):
         """ Works in-place """
@@ -41,6 +41,7 @@ def optimize_lightcone(self, G, p, edge):
     circuit = self._edge_energy_circuit(G, gamma, beta, edge=edge)
 
     tn = QtreeTensorNet.from_qtree_gates(circuit, backend=self.backend)
+    print('tensorcnt', len(tn.tensors))
     peo, tn = self.optimizer.optimize(tn)
     width = self.optimizer.treewidth
     # debt: proper opt data needed
