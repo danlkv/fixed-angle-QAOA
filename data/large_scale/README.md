@@ -1,3 +1,6 @@
+#
+Contract large scale tree graphs
+
 # Treewidth for larger connectivity
 
 conn = 3
